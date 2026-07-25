@@ -18,6 +18,7 @@ PAGE_CONTENTS = {
 }
 
 app = Dash(__name__, title='Practice Dashboard', suppress_callback_exceptions=True)
+server = app.server
 app.layout = html.Div([
     html.H1('EAGLE WIRELESS DASHBOARD', className='app-title'),
     dcc.Tabs(
@@ -38,5 +39,5 @@ def render_tab(tab_value):
 
 
 if __name__ == '__main__':
-    # Dash's development server reloads automatically when project files change.
-    app.run(debug=True, host='127.0.0.1', port=8050)
+    # Disable reloader on Windows to avoid signal.SIGTERM error
+    app.run(debug=True, host='127.0.0.1', port=8050, use_reloader=False)
