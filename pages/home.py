@@ -236,7 +236,7 @@ def _build_dashboard_content(df):
                 html.Div(className='kpi-card', children=[
                     html.Div('🛒', className='kpi-icon'),
                     html.Div([
-                        html.H4('Vidapay Amount'),
+                        html.H4('Spiff'),
                         html.P(f"{total_vidapay:.2f}", className='kpi-value'),
                     ])
                 ])
