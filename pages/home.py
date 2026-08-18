@@ -15,7 +15,7 @@ from data.sample_data import (
     COL_RAW_VARIANCE,
     COL_RAW_FINAL_VARIANCE,
     COL_RAW_EXP_COMM,
-    COL_RAW_VIDAPAY_SPIFF,
+    COL_RAW_SPIFF,
     COL_NORM_PRODUCT,
 )
 
@@ -140,8 +140,8 @@ def _build_dashboard_content(df):
         else 0.0
     )
     total_vidapay = (
-        pd.to_numeric(df[COL_RAW_VIDAPAY_SPIFF], errors='coerce').fillna(0).sum()
-        if COL_RAW_VIDAPAY_SPIFF in df.columns
+        pd.to_numeric(df[COL_RAW_SPIFF], errors='coerce').fillna(0).sum()
+        if COL_RAW_SPIFF in df.columns
         else 0.0
     )
 
