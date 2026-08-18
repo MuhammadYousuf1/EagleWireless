@@ -20,7 +20,7 @@ PAGE_CONTENTS = {
 app = Dash(__name__, title='Practice Dashboard', suppress_callback_exceptions=True)
 server = app.server
 app.layout = html.Div([
-    html.H1('EAGLE WIRELESS DASHBOARD', className='app-title'),
+    html.H1('SOFT RAPIDO WIRELESS', className='app-title'),
     dcc.Tabs(
         id='page-tabs',
         value='spiff',
