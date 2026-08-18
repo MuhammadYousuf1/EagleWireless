@@ -16,7 +16,7 @@ COL_RAW_IMEI = 'IMEI'
 COL_RAW_INVOICE_VERIF = 'Invoice Verification'
 
 # Financial & Comm Columns (including exact whitespace)
-COL_RAW_SPIFF = 'VidaPaySpiff'
+COL_RAW_SPIFF = 'Spiff'
 COL_RAW_EXP_COMM = 'Exp Comm'
 COL_RAW_COMM_RECEIVED = 'Comm Received'
 COL_RAW_DEVICE_REBATE = 'Device Rebate'
