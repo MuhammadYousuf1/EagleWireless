@@ -16,7 +16,7 @@ COL_RAW_IMEI = 'IMEI'
 COL_RAW_INVOICE_VERIF = 'Invoice Verification'
 
 # Financial & Comm Columns (including exact whitespace)
-COL_RAW_VIDAPAY_SPIFF = 'VidaPaySpiff'
+COL_RAW_SPIFF = 'VidaPaySpiff'
 COL_RAW_EXP_COMM = 'Exp Comm'
 COL_RAW_COMM_RECEIVED = 'Comm Received'
 COL_RAW_DEVICE_REBATE = 'Device Rebate'
@@ -48,7 +48,7 @@ COLUMN_MAPPINGS = {
     COL_NORM_REGION: [COL_RAW_STORE],
     COL_NORM_PRODUCT: [COL_RAW_SKU],
     COL_NORM_CATEGORY: [COL_RAW_SUB_TYPE],
-    COL_NORM_SALES: [COL_RAW_COMM_RECEIVED, COL_RAW_VIDAPAY_SPIFF, COL_RAW_DEVICE_REBATE, COL_RAW_EXP_COMM]
+    COL_NORM_SALES: [COL_RAW_COMM_RECEIVED, COL_RAW_SPIFF, COL_RAW_DEVICE_REBATE, COL_RAW_EXP_COMM]
 }
 
 DEFAULT_VALUES = {
@@ -83,7 +83,7 @@ def _is_currency_column(column_name):
         return False
 
     currency_columns = {
-        COL_RAW_VIDAPAY_SPIFF,
+        COL_RAW_SPIFF,
         COL_RAW_EXP_COMM,
         COL_RAW_COMM_RECEIVED,
         COL_RAW_DEVICE_REBATE,
@@ -313,7 +313,7 @@ def generate_sample_data() -> pd.DataFrame:
         # COL_RAW_ACT_ORDER_NUM: [f"ACT-{1000 + i}" for i in range(n_rows)],
         # COL_RAW_SKU: np.random.choice(['iPhone 15 Pro', 'Galaxy S24', 'Pixel 8 Pro'], size=n_rows),
         # COL_RAW_IMEI: np.random.choice([8.61021e+14, 3.58291e+14], size=n_rows),
-        # COL_RAW_VIDAPAY_SPIFF: np.random.uniform(5.0, 50.0, size=n_rows),
+        # COL_RAW_SPIFF: np.random.uniform(5.0, 50.0, size=n_rows),
         # COL_RAW_EXP_COMM: np.random.uniform(20.0, 100.0, size=n_rows),
         # COL_RAW_VARIANCE: np.random.uniform(-10.0, 10.0, size=n_rows),
         # COL_RAW_COMM_RECEIVED: np.random.uniform(15.0, 120.0, size=n_rows),
